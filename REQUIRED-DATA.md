@@ -14,6 +14,7 @@ A list of features used by the model to assess stroke risk, including medical, d
 
 **Stress Levels** – Perceived stress level from 0.00 to 9.99, with a step of 0.01.
 **Average Glucose Level** – Blood glucose concentration in mg/dL, from 60.00 to 200.00, with a step of 0.01.
+
 **Body Mass Index (BMI)** – Body fat estimate based on height and weight, from 15.01 to 40.00, with a step of 0.01.
 
 ## Binary representation
