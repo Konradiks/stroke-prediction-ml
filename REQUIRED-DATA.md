@@ -77,6 +77,7 @@ A list of features used by the model to assess stroke risk, including medical, d
 ### Smoking Status
 
 **Non-smoker** – Has never smoked.
+
 **Formerly Smoked** – Smoked in the past but not currently.
 
 **Currently Smokes** – Actively smokes cigarettes or tobacco.
