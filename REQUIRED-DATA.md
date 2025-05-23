@@ -123,7 +123,7 @@ A list of features used by the model to assess stroke risk, including medical, d
 
 ---
 
-## Symptoms – multi-pick (multiple symptoms can be selected)
+## Symptoms – multi-pick (multiple symptoms can be selected) - answer not required
 
 **Difficulty Speaking** – Trouble forming or articulating words.
 
