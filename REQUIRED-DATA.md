@@ -2,6 +2,8 @@
 
 A list of features used by the model to assess stroke risk, including medical, demographic, and lifestyle information.
 
+---
+
 ## Integer values
 
 **Age** – Integer value between 1 and 100 (validation to be confirmed).
@@ -14,6 +16,7 @@ A list of features used by the model to assess stroke risk, including medical, d
 
 **LDL Cholesterol** – "Bad" cholesterol value in mg/dL, as an unsigned integer.
 
+---
 
 ## Float values
 
@@ -23,6 +26,7 @@ A list of features used by the model to assess stroke risk, including medical, d
 
 **Body Mass Index (BMI)** – Body fat estimate based on height and weight, from 15.01 to 40.00, with a step of 0.01.
 
+---
 
 ## Binary representation
 
@@ -32,6 +36,7 @@ A list of features used by the model to assess stroke risk, including medical, d
 
 **Family History of Stroke** – Binary: 0 for No, 1 for Yes.
 
+---
 
 ## Boolean values as int (0 - false, 1 - true)
 
@@ -43,6 +48,7 @@ A list of features used by the model to assess stroke risk, including medical, d
 
 **Stroke History** – Whether the patient has had a stroke in the past.
 
+---
 
 ## Pick only one
 
@@ -54,6 +60,7 @@ A list of features used by the model to assess stroke risk, including medical, d
 
 **Divorced** – Patient is legally divorced.
 
+---
 
 ### Work Type
 
@@ -65,6 +72,7 @@ A list of features used by the model to assess stroke risk, including medical, d
 
 **Government Job** – Employed in a public/government sector.
 
+---
 
 ### Smoking Status
 
@@ -73,6 +81,7 @@ A list of features used by the model to assess stroke risk, including medical, d
 
 **Currently Smokes** – Actively smokes cigarettes or tobacco.
 
+---
 
 ### Alcohol Intake
 
@@ -84,6 +93,7 @@ A list of features used by the model to assess stroke risk, including medical, d
 
 **Frequent Drinker** – Consumes alcohol regularly.
 
+---
 
 ### Physical Activity
 
@@ -93,6 +103,7 @@ A list of features used by the model to assess stroke risk, including medical, d
 
 **High** – Frequently participates in intense physical activity.
 
+---
 
 ### Dietary Habits
 
@@ -110,8 +121,9 @@ A list of features used by the model to assess stroke risk, including medical, d
 
 **Keto** – High-fat, low-carb ketogenic diet.
 
+---
 
-### Symptoms – multi-pick (multiple symptoms can be selected)
+## Symptoms – multi-pick (multiple symptoms can be selected)
 
 **Difficulty Speaking** – Trouble forming or articulating words.
 
