@@ -1,12 +1,22 @@
+# temp
+*.joblib
+
 # project files and folders
 cachedir/
 x_test_scaled.csv
+x_test_unb.csv
+y_test_unb.csv
 x_train_scaled.csv
+y_train_unb.csv
+x_train_unb.csv
 y_test.csv
 y_train.csv
 dataAnalysis_old.ipynb
 pca anlysis.py
 .idea/
+results/*
+unbalanced_weight.py
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
