@@ -94,3 +94,12 @@ Probability for stroke: 6.12%
 ## 📖 License
 
 This project is licensed under the terms of the [LICENSE](LICENSE) file.
+
+---
+
+📚 Data Source
+The dataset used for training and testing the model is sourced from:
+
+Brain Stroke Dataset on Kaggle
+
+Jeśli chcesz, mogę Ci pomóc też z formatowaniem tego na Markdown lub dopasowaniem do reszty 
