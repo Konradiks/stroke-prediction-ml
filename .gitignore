@@ -1,7 +1,7 @@
 # temp
 
 *.joblib
-!stroke_prediction_model_pca8_gb_smote.joblib
+!models/stroke_prediction_model_pca8_gb_smote.joblib
 1model_name
 old*
 
