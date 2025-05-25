@@ -5,6 +5,7 @@ final_model_pca5_xgb_smote.joblib
 !models/stroke_prediction_model_pca8_gb_smote.joblib
 1model_name
 old*
+bin/*,
 
 
 # project files and folders
