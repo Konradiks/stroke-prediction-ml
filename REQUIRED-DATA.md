@@ -1,151 +1,46 @@
-# Required data types accepted by model
+# Required Input Data for Stroke Prediction Model
 
-A list of features used by the model to assess stroke risk, including medical, demographic, and lifestyle information.
-
----
-
-## Integer values
-
-**Age** – Integer value between 1 and 100 (validation to be confirmed).
-
-**Systolic BP** – The pressure in arteries when the heart beats (contracts), as an unsigned integer.
-
-**Diastolic BP** – The pressure in arteries between beats (relaxation phase), as an unsigned integer.
-
-**HDL Cholesterol** – "Good" cholesterol value in mg/dL, as an unsigned integer.
-
-**LDL Cholesterol** – "Bad" cholesterol value in mg/dL, as an unsigned integer.
+This model predicts the likelihood of a stroke based on a combination of medical, demographic, and lifestyle features. Below is a description of the accepted input types and value ranges.
 
 ---
 
-## Float values
+## Numeric Inputs
 
-**Stress Levels** – Perceived stress level from 0.00 to 9.99, with a step of 0.01.
-
-**Average Glucose Level** – Blood glucose concentration in mg/dL, from 60.00 to 200.00, with a step of 0.01.
-
-**Body Mass Index (BMI)** – Body fat estimate based on height and weight, from 15.01 to 40.00, with a step of 0.01.
-
----
-
-## Binary representation
-
-**Gender** – Binary: 0 for female, 1 for male.
-
-**Residence Type** – Binary: 0 for Urban, 1 for Rural.
-
-**Family History of Stroke** – Binary: 0 for No, 1 for Yes.
+| Feature                 | Type  | Expected Range       | Description                                     |
+| ----------------------- | ----- | -------------------- | ----------------------------------------------- |
+| **age**                 | float | 0–110 (step 1)       | Age of the individual in years.                 |
+| **avg\_glucose\_level** | float | \~50–280 (step 0.01) | Average blood glucose level (mg/dL).            |
+| **bmi**                 | float | \~14–50 (step 0.1)   | Body Mass Index, calculated from height/weight. |
 
 ---
 
-## Boolean values as int (0 - false, 1 - true)
+## Binary Health Indicators
 
-### True or False
-
-**Hypertension** – Whether the patient has high blood pressure.
-
-**Heart Disease** – Whether the patient has any diagnosed heart condition.
-
-**Stroke History** – Whether the patient has had a stroke in the past.
+| Feature          | Type | Accepted Values | Description                                 |
+| ---------------- | ---- | --------------- | ------------------------------------------- |
+| **hypertension** | str  | `'Yes'`, `'No'` | Whether the person has high blood pressure. |
+| **heartdisease** | str  | `'Yes'`, `'No'` | Whether the person has heart disease.       |
 
 ---
 
-## Pick only one
+## Demographic & Lifestyle Features
 
-### Marital Status
-
-**Married** – Patient is currently married.
-
-**Single** – Patient has never been married.
-
-**Divorced** – Patient is legally divorced.
-
----
-
-### Work Type
-
-**Self-employed** – Runs own business or works independently.
-
-**Never Worked** – No work history.
-
-**Private** – Employed in the private sector.
-
-**Government Job** – Employed in a public/government sector.
+| Feature             | Type | Accepted Values                                                | Description                               |
+| ------------------- | ---- | -------------------------------------------------------------- | ----------------------------------------- |
+| **gender**          | str  | `'Male'`, `'Female'`                                           | Biological sex of the person.             |
+| **ever\_married**   | str  | `'Yes'`, `'No'`                                                | Whether the person has ever been married. |
+| **work\_type**      | str  | `'Private'`, `'Self-employed'`, `'Govt_job'`, `'children'`     | Type of employment.                       |
+| **Residence\_type** | str  | `'Urban'`, `'Rural'`                                           | Location of residence.                    |
+| **smoking\_status** | str  | `'Formerly smoked'`, `'Never smoked'`, `'Smokes'`, `'Unknown'` | Smoking habits of the person.             |
 
 ---
 
-### Smoking Status
+## Output Format (optional)
 
-**Non-smoker** – Has never smoked.
-
-**Formerly Smoked** – Smoked in the past but not currently.
-
-**Currently Smokes** – Actively smokes cigarettes or tobacco.
+| Parameter  | Type | Default | Description                                                                                                                  |
+| ---------- | ---- | ------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| **result** | int  | 0       | Output format:<br>0 → simple percent string (e.g., `"6.12%"`)<br>1 → full sentence (e.g., `"Probability for stroke: 6.12%"`) |
 
 ---
 
-### Alcohol Intake
-
-**Social Drinker** – Drinks occasionally in social settings.
-
-**Never** – Has never consumed alcohol.
-
-**Rarely** – Drinks infrequently.
-
-**Frequent Drinker** – Consumes alcohol regularly.
-
----
-
-### Physical Activity
-
-**Moderate** – Engages in moderate physical exercise regularly.
-
-**Low** – Performs little to no physical activity.
-
-**High** – Frequently participates in intense physical activity.
-
----
-
-### Dietary Habits
-
-**Vegan** – Excludes all animal products.
-
-**Paleo** – Follows a diet based on Paleolithic-era foods.
-
-**Pescatarian** – Vegetarian diet that includes fish.
-
-**Gluten-Free** – Avoids all gluten-containing foods.
-
-**Vegetarian** – Excludes meat but may include dairy/eggs.
-
-**Non-Vegetarian** – Regularly consumes meat and animal products.
-
-**Keto** – High-fat, low-carb ketogenic diet.
-
----
-
-## Symptoms – multi-pick (multiple symptoms can be selected) - answer not required
-
-**Difficulty Speaking** – Trouble forming or articulating words.
-
-**Headache** – Persistent or severe headache.
-
-**Loss of Balance** – Trouble maintaining physical balance.
-
-**Dizziness** – Feeling lightheaded or faint.
-
-**Confusion** – Disoriented or trouble understanding.
-
-**Seizures** – Uncontrolled electrical disturbances in the brain.
-
-**Blurred Vision** – Difficulty seeing clearly.
-
-**Severe Fatigue** – Extreme tiredness or lack of energy.
-
-**Numbness** – Loss of sensation in part of the body.
-
-**Weakness** – Reduced physical strength, typically on one side.
-
----
-
-## Retun to [README.md](REAME.md)
+## 🔗 Return to [README.md](README.md)
