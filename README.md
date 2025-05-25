@@ -1,11 +1,3 @@
-Oto pełna zawartość pliku `README.md`, który zawiera:
-
-* strukturę katalogów,
-* ogólny opis projektu,
-* odnośnik do wymagań danych wejściowych,
-* instrukcję użycia funkcji `runStrokePrediction()` z pliku `runStrokePredictionML.py`.
-
----
 # 🧠 Stroke Prediction ML
 
 Machine learning project for predicting the risk of stroke based on patient health and lifestyle factors.
