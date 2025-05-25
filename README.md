@@ -90,15 +90,6 @@ Probability for stroke: 6.12%
 
 ---
 
-## 🧪 Development Environment
-
-Install dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
----
 
 ## 📖 License
 
