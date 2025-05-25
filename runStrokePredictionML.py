@@ -4,8 +4,8 @@ import pandas as pd
 import numpy as np
 
 
-MODEL_PATH = "stroke_prediction_model_pca8_gb_smote.joblib"
-SCALER_PATH = "scaler_selected_columns.joblib"
+MODEL_PATH = "models/stroke_prediction_model_pca8_gb_smote.joblib"
+SCALER_PATH = "scalers/scaler_selected_columns.joblib"
 EXAMPLE_DATA = {
     "gender": "Male",
     "age": 45.0,
@@ -161,7 +161,7 @@ def preprocess_input(gender, age, hypertension, heartdisease, ever_married,
 def runModel (df):
     model = 'stroke_prediction_model_pca8_gb_smote.joblib'
 
-    scaler = load("scaler_selected_columns.joblib")
+    scaler = load("scalers/scaler_selected_columns.joblib")
     columns_to_scale = [
         'age', 'avg_glucose_level', 'bmi'
     ]

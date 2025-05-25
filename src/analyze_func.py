@@ -16,10 +16,6 @@ def simple_analysis(df, target_col='stroke'):
     # %%
     print("Description of df:\n", df.describe())
     # %%
-
-    # %% md
-    # Za dużo trzeba zmiejszyć no stroke lub stucznie dotwoarzyć, jednak przez duża liczbę dancyh, usuwamy
-    # %%
     for col in df.columns:
         print("Col name: ", col)
         print("unique: ", df[col].nunique())
@@ -31,16 +27,59 @@ def simple_analysis(df, target_col='stroke'):
 
 def show_distribution(df):
     for col in df.columns:
-        quality_counts = df[col].value_counts()
-
         plt.figure(figsize=(8, 6))
-        plt.bar(quality_counts.index.astype(str), quality_counts, color='deeppink')
-        plt.title(f'Count Plot of {col}')
-        plt.xlabel(col)
-        plt.ylabel('Count')
-        plt.xticks(rotation=45)
+
+        if col == 'name':
+            name_counts = df[col].value_counts()
+            repeated_names = name_counts[name_counts > 1]
+            plt.bar(repeated_names.index, repeated_names.values, color='purple')
+            plt.title('Names (occurring more than once)')
+            plt.xlabel('Name')
+            plt.ylabel('Count')
+            plt.xticks(rotation=45)
+
+        elif col == 'gender' or col == 'work_type':
+            gender_counts = df[col].value_counts(normalize=True) * 100
+            plt.pie(gender_counts, labels=gender_counts.index, autopct='%1.1f%%', colors=['lightblue', 'lightcoral', 'lightgreen'])
+            if col == 'gender':
+                plt.title('Gender Distribution')
+            elif col == 'work_type':
+                plt.title('Work Type Distribution')
+            plt.axis('equal')
+
+        elif col == 'age':
+            bins = range(0, int(df['age'].max()) + 10, 10)
+            plt.hist(df['age'], bins=bins, color='skyblue', edgecolor='black')
+            plt.title('Age Distribution')
+            plt.xlabel('Age')
+            plt.ylabel('Count')
+            plt.xticks(bins)
+
+        elif col == 'avg_glucose_level':
+            plt.hist(df[col], bins=30, color='orange', edgecolor='black')
+            plt.title('Average Glucose Level Distribution')
+            plt.xlabel('Avg Glucose Level')
+            plt.ylabel('Count')
+
+        elif col == 'bmi':
+            rounded_bmi = df[col].dropna().round().astype(int)
+            counts = rounded_bmi.value_counts().sort_index()
+            plt.bar(counts.index.astype(str), counts.values, color='green')
+            plt.title('BMI Distribution (Rounded)')
+            plt.xlabel('BMI')
+            plt.ylabel('Count')
+
+        else:
+            counts = df[col].value_counts()
+            plt.bar(counts.index.astype(str), counts.values, color='deeppink')
+            plt.title(f'Count Plot of {col}')
+            plt.xlabel(col)
+            plt.ylabel('Count')
+            plt.xticks(rotation=45)
+
         plt.tight_layout()
         plt.show()
+
 
 
 def col_unique(df, cols=None):

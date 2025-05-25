@@ -17,10 +17,10 @@ memory.clear(warn=False)
 
 def load_data():
     print("Loading data...")
-    x_train = pd.read_csv("x_train_unb.csv")
-    x_test = pd.read_csv("x_test_unb.csv")
-    y_train = pd.read_csv("y_train_unb.csv").squeeze()
-    y_test = pd.read_csv("y_test_unb.csv").squeeze()
+    x_train = pd.read_csv("../datasets/x_train_unb.csv")
+    x_test = pd.read_csv("../datasets/x_test_unb.csv")
+    y_train = pd.read_csv("../datasets/y_train_unb.csv").squeeze()
+    y_test = pd.read_csv("../datasets/y_test_unb.csv").squeeze()
     return x_train, x_test, y_train, y_test
 
 def evaluate_model(config_name, y_true, y_pred):
