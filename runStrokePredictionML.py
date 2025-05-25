@@ -145,7 +145,7 @@ def preprocess_input(gender, age, hypertension, heartdisease, ever_married,
         'ever_married': ever_married,
         'Residence_type': Residence_type,
         'avg_glucose_level': avg_glucose_level,
-        'bmi': [21.01],
+        'bmi': bmi,
         # only one work_type
         'Private': private,
         'Self-employed': self_employed,
@@ -156,12 +156,15 @@ def preprocess_input(gender, age, hypertension, heartdisease, ever_married,
         'never smoked': never_smoked,
         'smokes': smokes,
         'Unknown': Unknown
-    })
+    }, index=[0])
 
 def runModel (df):
-    model = 'stroke_prediction_model_pca8_gb_smote.joblib'
 
-    scaler = load("scalers/scaler_selected_columns.joblib")
+    #MODEL_PATH = "./models/stroke_prediction_model_pca8_gb_smote.joblib"
+    #SCALER_PATH = "./scalers/scaler_selected_columns.joblib"
+    model = MODEL_PATH
+
+    scaler = load(SCALER_PATH )
     columns_to_scale = [
         'age', 'avg_glucose_level', 'bmi'
     ]
