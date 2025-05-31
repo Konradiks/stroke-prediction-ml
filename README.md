@@ -17,11 +17,11 @@ StrokePredictionML/
 ## 📦 What You Need to Run
 To use the prediction model, make sure you have the following files and folders in your working directory:
 
-✅ models/ folder (with trained ML model)
+✅ "models/" folder (with trained ML model)
 
-✅ scalers/ folder (with preprocessing scalers)
+✅ "scalers/" folder (with preprocessing scalers)
 
-✅ runStrokePredictionML.py file
+✅ "runStrokePredictionML.py" file
 
 These are required for the runStrokePrediction() function to work correctly.
 
