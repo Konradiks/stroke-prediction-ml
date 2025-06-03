@@ -6,11 +6,11 @@ This model predicts the likelihood of a stroke based on a combination of medical
 
 ## Numeric Inputs
 
-| Feature               | Type  | Expected Range       | Description                                     |
-| --------------------- | ----- | -------------------- | ----------------------------------------------- |
-| **age**               | float | 0–110 (step 1)       | Age of the individual in years.                 |
-| **avg_glucose_level** | float | \~50–280 (step 0.01) | Average blood glucose level (mg/dL).            |
-| **bmi**               | float | \~14–50 (step 0.1)   | Body Mass Index, calculated from height/weight. |
+| Feature                 | Type  | Expected Range       | Description                                     |
+| ----------------------- | ----- | -------------------- | ----------------------------------------------- |
+| **age**                 | float | 0–110 (step 1)       | Age of the individual in years.                 |
+| **avg\_glucose\_level** | float | \~50–280 (step 0.01) | Average blood glucose level (mg/dL).            |
+| **bmi**                 | float | \~14–50 (step 0.1)   | Body Mass Index, calculated from height/weight. |
 
 ---
 
@@ -25,13 +25,13 @@ This model predicts the likelihood of a stroke based on a combination of medical
 
 ## Demographic & Lifestyle Features
 
-| Feature            | Type | Accepted Values                                                | Description                               |
-| ------------------ | ---- | -------------------------------------------------------------- | ----------------------------------------- |
-| **gender**         | str  | `'Male'`, `'Female'`                                           | Biological sex of the person.             |
-| **ever_married**   | str  | `'Yes'`, `'No'`                                                | Whether the person has ever been married. |
-| **work_type**      | str  | `'Private'`, `'Self-employed'`, `'Govt_job'`, `'children'`     | Type of employment.                       |
-| **Residence_type** | str  | `'Urban'`, `'Rural'`                                           | Location of residence.                    |
-| **smoking_status** | str  | `'Formerly smoked'`, `'Never smoked'`, `'Smokes'`, `'Unknown'` | Smoking habits of the person.             |
+| Feature             | Type | Accepted Values                                                | Description                               |
+| ------------------- | ---- | -------------------------------------------------------------- | ----------------------------------------- |
+| **gender**          | str  | `'Male'`, `'Female'`                                           | Biological sex of the person.             |
+| **ever\_married**   | str  | `'Yes'`, `'No'`                                                | Whether the person has ever been married. |
+| **work\_type**      | str  | `'Private'`, `'Self-employed'`, `'Govt_job'`, `'children'`     | Type of employment.                       |
+| **Residence\_type** | str  | `'Urban'`, `'Rural'`                                           | Location of residence.                    |
+| **smoking\_status** | str  | `'Formerly smoked'`, `'Never smoked'`, `'Smokes'`, `'Unknown'` | Smoking habits of the person.             |
 
 ---
 
