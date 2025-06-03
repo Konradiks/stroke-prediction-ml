@@ -111,6 +111,8 @@ This project is licensed under the terms of the [LICENSE](LICENSE) file.
 ---
 
 ## 📚 Data Source
+
+[`Frontend repository`](https://github.com/Spoky03/stroke-prediction-webapp)
 The dataset used for training and testing the model is sourced from:
 
 [`Brain Stroke Dataset on Kaggle`](https://www.kaggle.com/datasets/jillanisofttech/brain-stroke-dataset)
