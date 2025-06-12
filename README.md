@@ -116,3 +116,10 @@ This project is licensed under the terms of the [LICENSE](LICENSE) file.
 The dataset used for training and testing the model is sourced from:
 
 [`Brain Stroke Dataset on Kaggle`](https://www.kaggle.com/datasets/jillanisofttech/brain-stroke-dataset)
+
+---
+## 🧑‍💻 Autorzy
+
+* PowerBI: [NataliaPolak13](https://github.com/NataliaPolak13)
+* Model Training and Optimization: [Konradiks](https://github.com/Konradiks)
+* Web Application: [Spoky03](https://github.com/Spoky03)
